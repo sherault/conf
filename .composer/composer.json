@@ -1,0 +1,20 @@
+{
+    "repositories": [
+        {
+            "url": "git@github.com:Nicofuma/PhpMetrics.git",
+            "type": "git"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^5.1",
+        "squizlabs/php_codesniffer": "*",
+        "phploc/phploc": "*",
+        "pdepend/pdepend": "*",
+        "sebastian/phpcpd": "*",
+        "theseer/phpdox": "*",
+        "mayflower/php-codebrowser": "~1.1",
+        "phpmd/phpmd": "@stable",
+        "phpdocumentor/phpdocumentor": "*",
+	"halleck45/phpmetrics": "^1.8.3"
+    }
+}

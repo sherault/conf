@@ -1,0 +1,28 @@
+[color]
+	status = auto
+	diff = auto
+
+[color "status"]
+	added = green
+	untracked = magenta
+	deleted = red
+[alias]
+	st = status
+	up = pull --rebase
+	ready = rebase -i @{u}
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	standup = log --since yesterday
+	co = checkout
+	cl = clone
+	ci = commit
+	pu = push
+	br = branch
+[user]
+	name = Stéphane HERAULT
+	email = stephane@oneteacher.net
+[core]
+	editor = emacs
+	fileMode = false
+	autocrlf = false
+[push]
+	default = matching

@@ -10,7 +10,7 @@ plugins=(git github redis-cli tmux nvm npm grunt brunch colored-man-pages histor
 
 # User configuration
 
-export PATH="$HOME/.composer/vendor/bin/:$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="$HOME/.composer/vendor/bin/:/opt/local/bin:/opt/local/sbin:$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/local/bin/:/opt/local/lib/mysql55/bin/"
 
 source $ZSH/oh-my-zsh.sh
 

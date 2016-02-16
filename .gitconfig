@@ -19,6 +19,7 @@
 	br = branch
 [user]
 	name = Stéphane HERAULT
+#	email = sherault@nrj.fr
 	email = stephane@oneteacher.net
 [core]
 	editor = emacs
@@ -26,3 +27,6 @@
 	autocrlf = false
 [push]
 	default = matching
+[pager]
+	diff = diff-so-fancy | less --tabs=1,5 -RFX
+	show = diff-so-fancy | less --tabs=1,5 -RFX

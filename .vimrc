@@ -13,11 +13,11 @@ color darkblue
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
 " numero des lignes
-"set number
-"highlight LineNr term=bold ctermfg=darkgray guifg=darkgray
+set number
+highlight LineNr term=bold ctermfg=darkgray guifg=darkgray
 
 " Show when a line exceeds 80 chars
-"au BufWinEnter * let w:m1=matchadd('ErrorMsg', '\%>80v.\+', -1)
+au BufWinEnter * let w:m1=matchadd('ErrorMsg', '\%>80v.\+', -1)
 
 " json syntax
 autocmd BufNewFile,BufRead *.json set ft=javascript

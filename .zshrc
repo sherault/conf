@@ -22,7 +22,7 @@ NODE_VERSION=v4.2.2
 export PATH="$PATH:$NVM_DIR/$NODE_VERSION/bin"
 nvm use 4.2.2 > /dev/null;
 
-alias xdcli='export XDEBUG_CONFIG="idekey=dev remote_host=172.20.11.44 remote_autostart=On"'
+alias xdcli='export XDEBUG_CONFIG="idekey=dev remote_host=172.20.11.44 remote_autostart=On remote_connect_back=On" && export PHP_IDE_CONFIG="serverName=Console"'
 alias xdclioff='unset XDEBUG_CONFIG'
 
 export EDITOR=emacs

@@ -1,52 +1,19 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+CONF=$HOME/conf
+export CONF=$CONF
 
-ZSH_THEME="bira"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
-
-plugins=(git github redis-cli tmux nvm npm grunt brunch colored-man-pages history composer symfony2 behat)
+export ZSH_CACHE_DIR=$HOME/.zsh
 
 # User configuration
-
-export PATH="$HOME/.composer/vendor/bin/:/opt/local/bin:/opt/local/sbin:$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/local/bin/:/opt/local/lib/mysql55/bin/"
-
-source $ZSH/oh-my-zsh.sh
-
+export PATH="$HOME/bin:$HOME/.composer/vendor/bin/:/opt/local/bin:/opt/local/sbin:$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/local/bin/"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-NODE_VERSION=v4.2.2
-export PATH="$PATH:$NVM_DIR/$NODE_VERSION/bin"
-nvm use 4.2.2 > /dev/null;
+nvm use node > /dev/null;
 
-alias xdcli='export XDEBUG_CONFIG="idekey=dev remote_host=172.20.11.44 remote_autostart=On remote_connect_back=On" && export PHP_IDE_CONFIG="serverName=Console"'
-alias xdclioff='unset XDEBUG_CONFIG'
-
+export NODE_BIN=$HOME/.nvm/versions/node/`nvm current`/bin
+export PATH=$NODE_BIN:$PATH
 export EDITOR=emacs
-
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
-    alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-# some more ls aliases
-alias ll='ls -la'
-alias la='ls -A'
-alias l='ls -CF'
-alias ag='ack-grep'
-alias zshconfig="mate ~/.zshrc"
-alias ohmyzsh="mate ~/.oh-my-zsh"
-
 
 # Colors
 NoColor="\033[0m"
@@ -55,3 +22,38 @@ Green="\033[0;32m"
 Red="\033[0;31m"
 Yellow="\033[0;33m"
 
+source $CONF/antigen/antigen.zsh
+
+antigen bundle robbyrussell/oh-my-zsh lib/
+antigen theme bira
+
+antigen bundle git
+antigen bundle docker
+antigen bundle github
+antigen bundle go
+antigen bundle symfony2
+antigen bundle redis-cli
+antigen bundle tmux
+antigen bundle nvm
+antigen bundle npm
+antigen bundle grunt
+antigen bundle brunch
+antigen bundle history
+antigen bundle z
+antigen bundle behat
+antigen bundle colored-man-pages
+antigen bundle composer
+antigen bundle colorize
+antigen bundle cp
+
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+
+antigen apply
+
+source $HOME/.aliases
+source $HOME/.private_aliases
+
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

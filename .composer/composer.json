@@ -15,6 +15,7 @@
         "mayflower/php-codebrowser": "~1.1",
         "phpmd/phpmd": "@stable",
         "phpdocumentor/phpdocumentor": "*",
-	"halleck45/phpmetrics": "^1.8.3"
+	"halleck45/phpmetrics": "^1.8.3",
+        "friendsofphp/php-cs-fixer": "^2.0"
     }
 }

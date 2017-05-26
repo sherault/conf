@@ -54,6 +54,7 @@ if [[ `which php` ]] ; then
 		    rm $HOME/.composer/composer.lock
 		fi
 		ln -s $CONF/.composer/composer.json $HOME/.composer/composer.json
+		ln -s $CONF/.composer/composer.lock $HOME/.composer/composer.lock
 		composer global install
 	fi
 fi

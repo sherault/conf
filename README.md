@@ -1,6 +1,6 @@
 # Install
 
-git clone git@github.com:sherault/conf.git (or git clone https://github.com/sherault/conf.git)
+`git clone git@github.com:sherault/conf.git` (or `git clone https://github.com/sherault/conf.git`)
 
 cd conf
 

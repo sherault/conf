@@ -1,12 +1,32 @@
-# My conf for ...
+# Install
+
+git clone git@github.com:sherault/conf.git (or git clone https://github.com/sherault/conf.git)
+
+cd conf
+
+./install.sh
+
+Update gitconfig accordingly.
+
+Done.
+
+# Inside:
 gitconfig
 
-zsh
+zsh/antigen+bundles/Oh-My-Zsh
 
-tmux
+tmux conf (TODO: update to latest)
 
 emacs
 
 composer
 
-others ...
+vim
+
+wget
+
+npm
+
+mongodb
+
+`.private_aliases` to put your own aliases

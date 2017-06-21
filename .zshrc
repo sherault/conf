@@ -1,4 +1,7 @@
 CONF=$HOME/conf
+
+export LC_CTYPE=en_US.UTF-8
+
 export CONF=$CONF
 
 export ZSH_CACHE_DIR=$HOME/.zsh

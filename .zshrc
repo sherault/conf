@@ -1,6 +1,7 @@
 CONF=$HOME/conf
 
 export LC_CTYPE=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 export CONF=$CONF
 
@@ -29,7 +30,7 @@ source $CONF/antigen/antigen.zsh
 
 antigen bundle robbyrussell/oh-my-zsh lib/
 
-antigen theme bira
+antigen theme https://github.com/denysdovhan/spaceship-zsh-theme spaceship
 
 antigen use oh-my-zsh
 

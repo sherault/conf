@@ -25,7 +25,10 @@ Yellow="\033[0;33m"
 source $CONF/antigen/antigen.zsh
 
 antigen bundle robbyrussell/oh-my-zsh lib/
+
 antigen theme bira
+
+antigen use oh-my-zsh
 
 antigen bundle git
 antigen bundle docker

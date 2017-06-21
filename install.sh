@@ -48,15 +48,15 @@ if [[ `which php` ]] ; then
 		echo 'Install composer'
 		curl -sS https://getcomposer.org/installer | php
 		mv composer.phar $HOME/bin/composer
-		# Check composer configuration
-		if [[ -e $HOME/.composer/composer.json ]]; then
-		    rm $HOME/.composer/composer.json
-		    rm $HOME/.composer/composer.lock
-		fi
-		ln -s $CONF/.composer/composer.json $HOME/.composer/composer.json
-		ln -s $CONF/.composer/composer.lock $HOME/.composer/composer.lock
-		composer global install
 	fi
+	# Check composer configuration
+	if [[ -e $HOME/.composer/composer.json ]]; then
+		rm $HOME/.composer/composer.json
+		rm $HOME/.composer/composer.lock
+	fi
+	ln -s $CONF/.composer/composer.json $HOME/.composer/composer.json
+	ln -s $CONF/.composer/composer.lock $HOME/.composer/composer.lock
+	composer global install
 fi
 
 # Install NVM and install latest node version, + diff-so-fancy

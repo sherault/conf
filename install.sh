@@ -67,3 +67,7 @@ if [[ ! -d $HOME/.nvm ]]; then
     nvm install node
     npm install -g diff-so-fancy
 fi
+
+if [[ ! -d $HOME/.tmux/plugins/tpm ]]; then
+    git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+fi

@@ -1,21 +1,22 @@
-CONF=$HOME/conf
+HOME=$(echo $HOME | sed 's:/*$::')
+CONF=${HOME}/conf
 
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 export CONF=$CONF
 
-export ZSH_CACHE_DIR=$HOME/.zsh
+export ZSH_CACHE_DIR=${HOME}/.zsh
 
 # User configuration
 export PATH="$HOME/bin:$HOME/.composer/vendor/bin/:/opt/local/bin:/opt/local/sbin:$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/local/bin/"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR=${HOME}/.nvm
+[ -s "${NVM_DIR}/nvm.sh" ] && . "${NVM_DIR}/nvm.sh"  # This loads nvm
 
-nvm use node > /dev/null;
+nvm use --delete-prefix --silent node > /dev/null;
 
-export NODE_BIN=$HOME/.nvm/versions/node/`nvm current`/bin
+export NODE_BIN=${HOME}/.nvm/versions/node/`nvm current`/bin
 export PATH=$NODE_BIN:$PATH
 export EDITOR=emacs
 

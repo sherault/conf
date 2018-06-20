@@ -2,3 +2,6 @@
 \#*\#
 .idea
 .DS_Store
+
+src/web/vendor
+src/web/js/fos_js_routes.js

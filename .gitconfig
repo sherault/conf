@@ -24,7 +24,7 @@
 	br = branch
 
 [core]
-	editor = emacs
+	editor = emacs -nw
 	fileMode = false
 	autocrlf = false
 	excludesfile = ~/.git_core_excludesfile

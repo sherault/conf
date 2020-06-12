@@ -21,3 +21,9 @@ au BufWinEnter * let w:m1=matchadd('ErrorMsg', '\%>80v.\+', -1)
 
 " json syntax
 autocmd BufNewFile,BufRead *.json set ft=javascript
+
+" GTD
+" check off a todo item and time stamp it
+map gg ^rx: <Esc>:r! date +" [\%H:\%M]"<ENTER>kJA<Esc>$
+" create a new todo item
+map gt o <Esc>:r! date +"  _ [\%H:\%M]"<ENTER>kJA

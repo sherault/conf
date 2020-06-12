@@ -19,5 +19,8 @@
         "friendsofphp/php-cs-fixer": "^2.0",
         "phpmetrics/phpmetrics": "^2.3",
         "povils/phpmnd": "^1.1"
+    },
+    "config": {
+        "cache-files-dir": "/Users/stephane/.composer/cache"
     }
 }

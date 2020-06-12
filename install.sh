@@ -31,6 +31,8 @@ if [[ ! -d $HOME/bin ]]; then
 	mkdir $HOME/bin
 fi
 
+export PATH=~/bin:$PATH
+
 # Make zsh cache directory 
 if [[ ! -d $HOME/.zsh ]]; then
 	mkdir $HOME/.zsh

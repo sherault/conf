@@ -1,6 +1,7 @@
 [user]
-	name = Stéphane HERAULT
+	name = Stephane HERAULT
 	email = stephane.herault@gmail.com
+	signingkey = 69EADC5844A40384
 
 [color]
 	status = auto
@@ -24,10 +25,10 @@
 	br = branch
 
 [core]
-	editor = emacs -nw
+	editor = vim
 	fileMode = false
 	autocrlf = false
-	excludesfile = ~/.git_core_excludesfile
+	excludesfile = /Users/stephane/.git_core_excludesfile
 
 [push]
 	default = matching
@@ -35,3 +36,13 @@
 [pager]
 	diff = diff-so-fancy | less --tabs=1,5 -RFX
 	show = diff-so-fancy | less --tabs=1,5 -RFX
+[gpg]
+	program = gpg
+[commit]
+	gpgSign = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

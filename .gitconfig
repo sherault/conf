@@ -1,7 +1,10 @@
 [user]
-	name = Stephane HERAULT
-	email = stephane.herault@gmail.com
-	signingkey = 69EADC5844A40384
+#	name = Stephane HERAULT
+#	email = stephane.herault@gmail.com
+#	signingkey = 69EADC5844A40384
+	name = Stéphane HERAULT
+	email = stephane.herault@aramisauto.com
+	signingkey = 0FF4312EF08651CB
 
 [color]
 	status = auto
@@ -36,13 +39,12 @@
 [pager]
 	diff = diff-so-fancy | less --tabs=1,5 -RFX
 	show = diff-so-fancy | less --tabs=1,5 -RFX
+
 [gpg]
 	program = gpg
 [commit]
 	gpgSign = true
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[diff]
+	renameLimit = 999999
+[rename]
+	renameLimit = 999999

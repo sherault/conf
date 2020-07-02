@@ -16,6 +16,18 @@ FILES=(
 	.zshrc
 	.aliases
 )
+# Install submodules
+git submodule update --init --recursive
+
+# Install wget
+if [[ `which wget` ]]; then
+    brew install wget
+fi
+
+# install fzy
+if [[ `which fzy`]]; then
+		brew install fzy
+fi
 
 # Loop files, remove link/file if already exists, create symlink
 for file in ${FILES[@]}; do
@@ -58,7 +70,7 @@ if [[ `which php` ]] ; then
 	fi
 	ln -s $CONF/.composer/composer.json $HOME/.composer/composer.json
 	ln -s $CONF/.composer/composer.lock $HOME/.composer/composer.lock
-	composer global install
+	~/bin/composer global install
 fi
 
 # Install NVM and install latest node version, + diff-so-fancy
@@ -68,6 +80,7 @@ if [[ ! -d $HOME/.nvm ]]; then
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
     nvm install node
     npm install -g diff-so-fancy
+    npm install -g fx
 fi
 
 if [[ ! -d $HOME/.tmux/plugins/tpm ]]; then
